@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 // middlewre
-
+app.use(cors());
 app.use(express.json())
 
 app.use("/api",userRoutes);
