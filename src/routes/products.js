@@ -34,9 +34,9 @@ router.get("/products/:id", (req,res)=>{
 // Actualizar Usuario
 router.put("/products/:id", (req,res)=>{
     const {id} = req.params;
-    const {nombre,edad,correo}=req.body
+    const {name,description,price}=req.body
     productsSchema
-    .updateOne({_id: id},{$set:{nombre,edad,correo}})
+    .updateOne({_id: id},{$set:{name,description,price}})
     .then((data)=>res.json(data))
     .catch((error)=> res.json({message:error}))
 

@@ -34,9 +34,9 @@ router.get("/categorie/:id", (req,res)=>{
 // Actualizar Usuario
 router.put("/categorie/:id", (req,res)=>{
     const {id} = req.params;
-    const {nombre}=req.body
+    const {name}=req.body
     categorieSchema
-    .updateOne({_id: id},{$set:{nombre}})
+    .updateOne({_id: id},{$set:{name}})
     .then((data)=>res.json(data))
     .catch((error)=> res.json({message:error}))
 
